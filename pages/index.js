@@ -17,7 +17,7 @@ export default function Home() {
 
       <style jsx>{`
         .container {
-          height: 100vh;
+
         }
         
         main {
