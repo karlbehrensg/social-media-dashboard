@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from "../components/Header";
+import GeneralCard from "../components/GeneralCard";
 
 export default function Home() {
   return (
@@ -8,23 +9,21 @@ export default function Home() {
         <title>Social Media Dashboard</title>
       </Head>
 
-      <div className='container'>
+      <div>
         <Header />
-        <main>
-          <h1>Home</h1>
-        </main>
+        <div className='container'>
+          <GeneralCard />
+        </div>
       </div>
 
       <style jsx>{`
         .container {
-
-        }
-        
-        main {
-          height: 100%;
+          display: inherit;
           width: 100%;
-          display: grid;
-          place-items: center;
+          max-width: 1160px;
+          margin: 0 auto;
+          padding: 0 25px;
+          justify-content: inherit;
         }
       `}</style>
     </>

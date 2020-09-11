@@ -4,8 +4,8 @@ export default function Header () {
       <header>
         <div className="container">
           <div className="title-container">
-            <h1 className="title">Social Media Dashboard</h1>
-            <strong className="followers">Total Followers: 100</strong>
+            <h1>Social Media Dashboard</h1>
+            <strong>Total Followers: 100</strong>
           </div>
         </div>
       </header>
@@ -30,13 +30,13 @@ export default function Header () {
           padding: 35px 0 25px 0;
         }
         
-        .title {
+        h1 {
           font-size: 1.95em;
           margin-bottom: 5px;
           color: #fff;
         }
         
-        .followers {
+        strong {
           color: #8b97c5;
           font-size: 14px;
         }
