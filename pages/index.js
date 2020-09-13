@@ -12,7 +12,12 @@ export default function Home() {
       <div>
         <Header />
         <div className='container'>
-          <GeneralCard />
+          <div className="general-stats">
+            <GeneralCard />
+            <GeneralCard />
+            <GeneralCard />
+            <GeneralCard />
+          </div>
         </div>
       </div>
 
@@ -24,6 +29,14 @@ export default function Home() {
           margin: 0 auto;
           padding: 0 25px;
           justify-content: inherit;
+        }
+        
+        .general-stats {
+          display: grid;
+          column-gap: 30px;
+          row-gap: 10px;
+          padding: 21px 0;
+          grid-template-columns: repeat(4, 1fr);
         }
       `}</style>
     </>
