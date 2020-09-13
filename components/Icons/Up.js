@@ -14,6 +14,7 @@ export default function Up(props) {
           background-size: contain;
           background-position: center;
           background-repeat: no-repeat;
+          margin-top: 6px;
         }
       `}</style>
     </>

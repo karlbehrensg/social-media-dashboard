@@ -71,7 +71,7 @@ export default function GeneralCard () {
           display: flex;
           padding-top: 5px;
           justify-content: center;
-          align-content: center;
+          align-items: center;
         }
         
         .sn-trend-count--up {
