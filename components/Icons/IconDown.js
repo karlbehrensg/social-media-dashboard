@@ -1,6 +1,6 @@
 import * as React from "react"
 
-export default function Down(props) {
+export default function IconDown(props) {
   return (
     <>
       <svg width={8} height={4} {...props}>

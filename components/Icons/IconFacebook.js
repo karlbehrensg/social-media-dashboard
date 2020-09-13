@@ -1,6 +1,6 @@
 import * as React from "react"
 
-export default function Facebook(props) {
+export default function IconFacebook(props) {
   return (
     <svg width={20} height={20} {...props}>
       <path

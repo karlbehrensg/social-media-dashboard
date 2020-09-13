@@ -1,6 +1,6 @@
 import * as React from "react"
 
-export default function Youtube(props) {
+export default function IconYoutube(props) {
   return (
     <svg width={20} height={20} {...props}>
       <path

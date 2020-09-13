@@ -34,6 +34,8 @@ export default function Home() {
       .then(setYoutube)
   }, [])
 
+  const totalFollowers = facebook.followers + instagram.followers + twitter.followers + youtube.followers
+
   return (
     <>
       <Head>
@@ -41,7 +43,7 @@ export default function Home() {
       </Head>
 
       <div>
-        <Header />
+        <Header total={totalFollowers} />
         <div className='container'>
           <div className="general-stats">
             <GeneralCard

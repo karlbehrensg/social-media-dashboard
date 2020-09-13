@@ -1,12 +1,12 @@
-import Facebook from "../Icons/Facebook";
-import Up from "../Icons/Up";
+import IconFacebook from "../Icons/IconFacebook";
+import IconUp from "../Icons/IconUp";
 
 export default function GeneralCard ({ userName, followers, today }) {
   return (
     <>
       <div className="general-card">
         <div className="general-card__header">
-          <Facebook/>
+          <IconFacebook/>
           <span className="sn-user">{userName}</span>
         </div>
         <div className="general-card__main">
@@ -14,7 +14,7 @@ export default function GeneralCard ({ userName, followers, today }) {
           <span className="sn-feedback-title">FOLLOWERS</span>
         </div>
         <div className="general-card__footer">
-          <Up />
+          <IconUp />
           <span className="sn-trend-count sn-trend-count--up">{today}</span>
         </div>
       </div>

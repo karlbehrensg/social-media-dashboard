@@ -1,6 +1,6 @@
 import * as React from "react"
 
-export default function Twitter(props) {
+export default function IconTwitter(props) {
   return (
     <svg width={20} height={17} {...props}>
       <path

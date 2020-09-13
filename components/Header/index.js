@@ -1,11 +1,11 @@
-export default function Header () {
+export default function Header ({ total }) {
   return (
     <>
       <header>
         <div className="container">
           <div className="title-container">
             <h1>Social Media Dashboard</h1>
-            <strong>Total Followers: 100</strong>
+            <strong>Total Followers: {total}</strong>
           </div>
         </div>
       </header>
