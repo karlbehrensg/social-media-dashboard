@@ -1,8 +1,17 @@
 import Head from 'next/head'
 import Header from "../components/Header";
 import GeneralCard from "../components/GeneralCard";
+import {useState, useEffect} from "react";
 
 export default function Home() {
+  const [stats, setStats] = useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:3000/api/facebook')
+      .then(res => res.json())
+      .then(setStats)
+  }, [])
+
   return (
     <>
       <Head>
@@ -13,10 +22,11 @@ export default function Home() {
         <Header />
         <div className='container'>
           <div className="general-stats">
-            <GeneralCard />
-            <GeneralCard />
-            <GeneralCard />
-            <GeneralCard />
+            <GeneralCard
+              userName={stats.userName}
+              followers={stats.followers}
+              today={stats.today}
+            />
           </div>
         </div>
       </div>
