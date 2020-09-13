@@ -1,12 +1,12 @@
 import IconFacebook from "../Icons/IconFacebook";
 import IconUp from "../Icons/IconUp";
 
-export default function GeneralCard ({ userName, followers, today }) {
+export default function GeneralCard ({ socialMedia, userName, followers, today }) {
   return (
     <>
       <div className="general-card">
         <div className="general-card__header">
-          <IconFacebook/>
+          {socialMedia}
           <span className="sn-user">{userName}</span>
         </div>
         <div className="general-card__main">
