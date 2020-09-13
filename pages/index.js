@@ -4,12 +4,34 @@ import GeneralCard from "../components/GeneralCard";
 import {useState, useEffect} from "react";
 
 export default function Home() {
-  const [stats, setStats] = useState([])
+  const [facebook, setFacebook] = useState([])
+  const [twitter, setTwitter] = useState([])
+  const [instagram, setInstagram] = useState([])
+  const [youtube, setYoutube] = useState([])
+
 
   useEffect(() => {
     fetch('http://localhost:3000/api/facebook')
       .then(res => res.json())
-      .then(setStats)
+      .then(setFacebook)
+  }, [])
+
+  useEffect(() => {
+    fetch('http://localhost:3000/api/twitter')
+      .then(res => res.json())
+      .then(setTwitter)
+  }, [])
+
+  useEffect(() => {
+    fetch('http://localhost:3000/api/instagram')
+      .then(res => res.json())
+      .then(setInstagram)
+  }, [])
+
+  useEffect(() => {
+    fetch('http://localhost:3000/api/youtube')
+      .then(res => res.json())
+      .then(setYoutube)
   }, [])
 
   return (
@@ -23,9 +45,24 @@ export default function Home() {
         <div className='container'>
           <div className="general-stats">
             <GeneralCard
-              userName={stats.userName}
-              followers={stats.followers}
-              today={stats.today}
+              userName={facebook.username}
+              followers={facebook.followers}
+              today={facebook.today}
+            />
+            <GeneralCard
+              userName={twitter.username}
+              followers={twitter.followers}
+              today={twitter.today}
+            />
+            <GeneralCard
+              userName={instagram.username}
+              followers={instagram.followers}
+              today={instagram.today}
+            />
+            <GeneralCard
+              userName={youtube.username}
+              followers={youtube.followers}
+              today={youtube.today}
             />
           </div>
         </div>
