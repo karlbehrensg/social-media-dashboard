@@ -3,6 +3,6 @@ export default (req, res) => {
   res.json({
     username: 'Karl Behrens',
     followers: 4060,
-    today: 22
+    today: -22
   })
 }

@@ -1,7 +1,9 @@
 import IconFacebook from "../Icons/IconFacebook";
 import IconUp from "../Icons/IconUp";
+import IconDown from "../Icons/IconDown";
 
 export default function GeneralCard ({ socialMedia, userName, followers, today }) {
+  const classUpOrDown = today > 0 ? "sn-trend-count sn-trend-count--up" : "sn-trend-count sn-trend-count--down"
   return (
     <>
       <div className="general-card">
@@ -14,8 +16,10 @@ export default function GeneralCard ({ socialMedia, userName, followers, today }
           <span className="sn-feedback-title">FOLLOWERS</span>
         </div>
         <div className="general-card__footer">
-          <IconUp />
-          <span className="sn-trend-count sn-trend-count--up">{today}</span>
+          {
+            today > 0 ? <IconUp /> : <IconDown />
+          }
+          <span className={classUpOrDown}>{Math.abs(today)}</span>
         </div>
       </div>
 
@@ -76,6 +80,10 @@ export default function GeneralCard ({ socialMedia, userName, followers, today }
         
         .sn-trend-count--up {
           color: #1db489;
+        }
+        
+        .sn-trend-count--down {
+          color: #dc414c;
         }
         
         .sn-trend-count {
