@@ -1,12 +1,7 @@
 import Head from 'next/head'
 import {useState, useEffect} from "react";
-
-import Header from "../components/Header";
-import GeneralCard from "../components/GeneralCard";
-import IconFacebook from "../components/Icons/IconFacebook";
-import IconTwitter from "../components/Icons/IconTwitter";
-import IconInstagram from "../components/Icons/IconInstagram";
-import IconYoutube from "../components/Icons/IconYoutube";
+import GeneralStats from "../components/GeneralStats";
+import HeaderStats from "../components/HeaderStats";
 
 export default function Home() {
   const [facebook, setFacebook] = useState([])
@@ -48,35 +43,14 @@ export default function Home() {
       </Head>
 
       <div>
-        <Header total={totalFollowers} />
+        <HeaderStats total={totalFollowers} />
         <div className='container'>
-          <div className="general-stats">
-            <GeneralCard
-              socialMedia=<IconFacebook />
-              userName={facebook.username}
-              followers={facebook.followers}
-              today={facebook.today}
-            />
-            <GeneralCard
-              socialMedia=<IconTwitter />
-              userName={twitter.username}
-              followers={twitter.followers}
-              today={twitter.today}
-            />
-            <GeneralCard
-              socialMedia=<IconInstagram />
-              userName={instagram.username}
-              followers={instagram.followers}
-              today={instagram.today}
-            />
-            <GeneralCard
-              socialMedia=<IconYoutube />
-              userName={youtube.username}
-              followers={youtube.followers}
-              today={youtube.today}
-            />
-          </div>
-          
+          <GeneralStats
+            facebook={facebook}
+            instagram={instagram}
+            twitter={twitter}
+            youtube={youtube}
+          />
         </div>
       </div>
 
@@ -88,14 +62,6 @@ export default function Home() {
           margin: 0 auto;
           padding: 0 25px;
           justify-content: inherit;
-        }
-        
-        .general-stats {
-          display: grid;
-          column-gap: 30px;
-          row-gap: 10px;
-          padding: 21px 0;
-          grid-template-columns: repeat(4, 1fr);
         }
       `}</style>
     </>

@@ -19,7 +19,7 @@ export default function GeneralCard ({ socialMedia, userName, followers, today }
           {
             today > 0 ? <IconUp /> : <IconDown />
           }
-          <span className={classUpOrDown}>{Math.abs(today)}</span>
+          <span className={classUpOrDown}>{Math.abs(today)} Today</span>
         </div>
       </div>
 

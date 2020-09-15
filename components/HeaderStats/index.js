@@ -1,4 +1,4 @@
-export default function Header ({ total }) {
+export default function HeaderStats ({ total }) {
   return (
     <>
       <header>
